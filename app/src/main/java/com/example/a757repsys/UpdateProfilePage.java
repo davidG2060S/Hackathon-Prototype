@@ -161,7 +161,8 @@ public class UpdateProfilePage extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -218,26 +219,5 @@ public class UpdateProfilePage extends AppCompatActivity {
             }
         });
     }
-    /*public void updateEmail(){
-        nEmail=etxtEmail.getText().toString();
 
-        user.updateEmail(nEmail)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        Toast.makeText(getApplicationContext(),
-                                "Email and Profile details Updated",
-                                Toast.LENGTH_SHORT).show();
-                        updateprof();
-
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(getApplicationContext(),
-                        "Email and Profile details not Updated",
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-    }*/
 }

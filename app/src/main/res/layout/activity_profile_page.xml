@@ -157,7 +157,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
-        android:text="EDIT INFORMATION"
+        android:text=" "
         android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgViewUpdateProfileBtn"
@@ -178,14 +178,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.834"
-        app:srcCompat="@drawable/profilebt_up" />
+        app:srcCompat="@drawable/changepassword" />
 
     <TextView
         android:id="@+id/txtViewChangePassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
-        android:text="CHANGE PASSWORD"
+        android:text=" "
         android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgViewChangePasswordBtn"

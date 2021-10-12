@@ -1,5 +1,6 @@
 package com.example.a757repsys;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -21,7 +22,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 public class ProfilePage extends AppCompatActivity {
 
     ImageView backBtn3, viewUserInfo, updateprofilebtn, changepasswordbtn;
-    TextView viewProfile, viewName1, viewName2, viewEmail1, viewEmail2, viewContact1, viewContact2, viewAddress1, viewAddress2, viewEditProfile, viewChangePassword;
+    TextView viewProfile, viewName1, viewName2, viewEmail1, viewEmail2, viewContact1, viewContact2,
+            viewAddress1, viewAddress2, viewEditProfile, viewChangePassword;
 
     //FIREBASE
     private String uid;
@@ -32,6 +34,7 @@ public class ProfilePage extends AppCompatActivity {
 
 
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +44,6 @@ public class ProfilePage extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         uid = mAuth.getCurrentUser().getUid();
         DocumentReference Docref = db.collection("Users").document(uid);
-
-       // database = FirebaseDatabase
-        //        .getInstance("https://repsys-14ce6-default-rtdb.asia-southeast1.firebasedatabase.app/");
 
         //FIREBASE
 
@@ -95,27 +95,25 @@ public class ProfilePage extends AppCompatActivity {
             }
         });
 
-        backBtn3.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
+        backBtn3.setOnTouchListener((v, event) -> {
 
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP:
-                    case MotionEvent.ACTION_CANCEL: {
-                        ImageView view = (ImageView) v;
-                        view.getDrawable().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN: {
+                    ImageView view = (ImageView) v;
+                    view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                            .SRC_ATOP);
+                    view.invalidate();
+                    break;
                 }
-                return false;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL: {
+                    ImageView view = (ImageView) v;
+                    view.getDrawable().clearColorFilter();
+                    view.invalidate();
+                    break;
+                }
             }
+            return false;
         });
 
         //how to update profile information
@@ -134,7 +132,8 @@ public class ProfilePage extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -168,7 +167,8 @@ public class ProfilePage extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -188,25 +188,3 @@ public class ProfilePage extends AppCompatActivity {
     }
 
 }
-/*mDatabase.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String firstname = snapshot.child("firstName").getValue(String.class);
-                String lastname = snapshot.child("lastName").getValue(String.class);
-                String contactno = snapshot.child("phoneNumber").getValue(String.class);
-                String address = snapshot.child("address").getValue(String.class);
-                String passemail=snapshot.child("email").getValue(String.class);
-                viewName2.setText(firstname+" "+lastname);
-
-                viewEmail2.setText(passemail);
-
-                viewContact2 .setText(contactno);
-
-                viewAddress2.setText(address);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });*/

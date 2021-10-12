@@ -9,7 +9,8 @@ public class Users {
         this.password=password;
     }
 
-    public Users(String tempemail, String password, String fname, String lname, String contact, String add ) {
+    public Users(String tempemail, String password, String fname, String lname,
+                 String contact, String add ) {
         this.email=tempemail;
         this.password=password;
         this.firstName=fname;

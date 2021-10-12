@@ -33,7 +33,8 @@ import java.util.Map;
 public class ChangePasswordPage extends AppCompatActivity {
 
     ImageView backBtn4, viewCPUserInfo, changepasswordbtn;
-    TextView viewChangePassword, viewOldPasword, viewNewPassword, viewConfirmPassword, viewUpdatePassword;
+    TextView viewChangePassword, viewOldPasword, viewNewPassword, viewConfirmPassword,
+            viewUpdatePassword;
     EditText oldpassword, newpassword, confirmpassword;
     FirebaseFirestore db;
     FirebaseUser user;
@@ -98,7 +99,8 @@ public class ChangePasswordPage extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000,
+                                PorterDuff.Mode.SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -172,33 +174,24 @@ public class ChangePasswordPage extends AppCompatActivity {
         oldPass = oldpassword.getText().toString().trim();
         userdetails.put("Password",newPass);
         Log.d("error","valOldpass "+oldPass);
-        //oldPass==compare
-        /*if (compare.equals(oldPass)){
-            String email = user.getEmail();
-            emailReset(email);
-
-        }else{
-            Toast.makeText(getApplicationContext(), "Old Password does not Match ",
-                    Toast.LENGTH_SHORT).show();
-        }*/
 
         if (compare.equals(oldPass)&&newPass.equals(conPass)){
             String email = user.getEmail().trim();
             Log.d("error","valEmail "+ email);
             AuthCredential cred = EmailAuthProvider.getCredential(email,oldPass);
-
             Log.d("error","valcred "+ cred);
-            //Log.d("error","valNewPass "+ newPass);
             user.reauthenticate(cred).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isComplete()){
-                        user.updatePassword(newPass).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        user.updatePassword(newPass).addOnCompleteListener
+                                (new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 Toast.makeText(getApplicationContext(), "Password Reset ",
                                         Toast.LENGTH_SHORT).show();
-                                db.collection("Users").document(uid).update(userdetails);
+                                db.collection("Users").document(uid).
+                                        update(userdetails);
                                 startActivity(new Intent(ChangePasswordPage.this,
                                         ProfilePage.class));
                                 finish();
@@ -215,48 +208,9 @@ public class ChangePasswordPage extends AppCompatActivity {
             Log.d("error","valUserID "+ uid);
 
         }else{
-            Toast.makeText(getApplicationContext(), "Old Password/New Password does not Match ",
-                    Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Old Password/New Password does not Match "
+                    ,Toast.LENGTH_SHORT).show();
 
-
-
-            /*user.updatePassword(newPass)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(getApplicationContext(), "Password is changed",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(getApplicationContext(), "Failed to change password",
-                            Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            user.reauthenticate(cred).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if (task.isSuccessful()){
-                        Log.d("error","valNewpass "+ newPass);
-                        user.updatePassword(newPass).addOnCompleteListener(
-                                new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
-                                        Toast.makeText(getApplicationContext(),
-                                                "Successfully changed password",
-                                                Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Failed to reAuth",
-                                Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-
-            */
         }
 
     }

@@ -1,5 +1,6 @@
 package com.example.a757repsys;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -32,7 +33,8 @@ import java.util.Map;
 public class SignUpPage extends AppCompatActivity {
 
     ImageView backbtn1, repsys, registerbtn;
-    TextView header, emailView, fnView, lnView, contactView, addView, passView, confirmpassView, registerView, txtViewTandC;
+    TextView header, emailView, fnView, lnView, contactView, addView, passView, confirmpassView,
+            registerView, txtViewTandC;
     EditText email, fn, ln, contact, add, pass, confirmpass;
     CheckBox box;
 
@@ -46,15 +48,10 @@ public class SignUpPage extends AppCompatActivity {
 
     //FIREBASE
     private FirebaseAuth mAuth;
-    private FirebaseDatabase database;
-    private DatabaseReference mDatabase;
-    //private static final String USER = "Users";
-    //private Users uSER;
     private static final String TAG = "SignUpPage";
-    //private Users uSER;
-    FirebaseUser currentuser;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,27 +95,24 @@ public class SignUpPage extends AppCompatActivity {
             }
         });
 
-        backbtn1.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
+        backbtn1.setOnTouchListener((v, event) -> {
 
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP:
-                    case MotionEvent.ACTION_CANCEL: {
-                        ImageView view = (ImageView) v;
-                        view.getDrawable().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN: {
+                    ImageView view = (ImageView) v;
+                    view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                    view.invalidate();
+                    break;
                 }
-                return false;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL: {
+                    ImageView view = (ImageView) v;
+                    view.getDrawable().clearColorFilter();
+                    view.invalidate();
+                    break;
+                }
             }
+            return false;
         });
 
 
@@ -207,7 +201,8 @@ public class SignUpPage extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -226,7 +221,8 @@ public class SignUpPage extends AppCompatActivity {
         txtViewTandC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SignUpPage.this,TermsAndConditionsPage.class);
+                Intent intent = new Intent(SignUpPage.this,TermsAndConditionsPage
+                        .class);
                 tempFname = fn.getText().toString();
                 tempLname = ln.getText().toString();
                 tempContact = contact.getText().toString();
@@ -271,56 +267,7 @@ public class SignUpPage extends AppCompatActivity {
 
 
     }
-/*
-@Override
-    protected void onPause() {
-        // TODO Auto-generated method stub
-        super.onPause();
-        tempLname = fn.getText().toString();
-        tempContact = contact.getText().toString();
-        tempAdd=add.getText().toString();
-        tempconpass=confirmpass.getText().toString();
-        tempemail2=email.getText().toString();
-        temppassword=pass.getText().toString();
-    }
 
-
- */
-
-    /*@Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
-    }*/
-/*
-Boolean isEmpty(EditText text) {
-    CharSequence str = text.getText().toString();
-    return (!TextUtils.isEmpty(str));
-}
-Boolean isPassword(EditText checkpass){
-CharSequence cpass  = checkpass.getText().toString();
-return ( !TextUtils.isEmpty(cpass));
-
-
-
-}*/
-    /*public void checkDataEntered( ){
-        if (isEmpty(fn)) {
-            Toast t = Toast.makeText(this, "You must enter first name to register!", Toast.LENGTH_SHORT);
-            t.show();
-        }
-
-        if (isEmpty(ln)) {
-            ln.setError("Last name is required!");
-        }
-
-        if (isPassword(email) == false) {
-            email.setError("Enter valid email!");
-        }
-
-    }*/
 
 
     public void registerUser(String tempemail,String password){

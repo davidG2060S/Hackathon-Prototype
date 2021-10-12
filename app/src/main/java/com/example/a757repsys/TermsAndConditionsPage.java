@@ -61,7 +61,8 @@ public class TermsAndConditionsPage extends AppCompatActivity {
         backBtntc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TermsAndConditionsPage.this,SignUpPage.class);
+                Intent intent = new Intent(TermsAndConditionsPage.this,
+                        SignUpPage.class);
                 intent.putExtra("tempFname",tempFname);
                 intent.putExtra("tempLname",tempLname);
                 intent.putExtra("tempContact",tempContact);

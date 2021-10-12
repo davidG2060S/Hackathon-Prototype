@@ -17,11 +17,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/barangay_icon" />
+        app:srcCompat="@drawable/company_icon" />
 
     <ProgressBar
         android:id="@+id/prgsBar"
         style="?android:attr/progressBarStyle"
+        android:indeterminateTint="@android:color/holo_blue_light"
         android:layout_width="107dp"
         android:layout_height="98dp"
         app:layout_constraintBottom_toBottomOf="@+id/imgViewBarangayLogo"

@@ -169,7 +169,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.865"
-            app:srcCompat="@drawable/upload_up" />
+            app:srcCompat="@drawable/uploadphoto" />
 
         <ImageView
             android:id="@+id/imgViewSubmitBtn"
@@ -190,22 +190,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
-            android:text="UPLOAD PHOTO"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imgViewUploadBtn"
-            app:layout_constraintEnd_toStartOf="@+id/imgViewCameraLogo"
-            app:layout_constraintHorizontal_bias="0.816"
-            app:layout_constraintStart_toStartOf="@+id/imgViewUploadBtn"
-            app:layout_constraintTop_toTopOf="@+id/imgViewUploadBtn"
-            app:layout_constraintVertical_bias="0.444" />
-
-        <TextView
-            android:id="@+id/textViewUpload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_medium"
-            android:text="UPLOAD PHOTO"
+            android:text=" "
             android:textColor="@color/black"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/imgViewUploadBtn"
@@ -220,7 +205,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
-            android:text="SUBMIT"
+            android:text=""
             android:textColor="@color/black"
             android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/imgViewSubmitBtn"

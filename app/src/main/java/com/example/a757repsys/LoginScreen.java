@@ -1,5 +1,6 @@
 package com.example.a757repsys;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ public class LoginScreen extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseUser user;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,12 +74,15 @@ public class LoginScreen extends AppCompatActivity {
                             if (task.isSuccessful()){
                                 Toast.makeText(getApplicationContext(), "Login Successful"
                                         ,Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(LoginScreen.this,MainMenu1.class));
+                                startActivity(new Intent(LoginScreen.this,MainMenu1
+                                        .class));
                                 finish();//possible error
                             }else{
-                                Toast.makeText(getApplicationContext(), "Login Failed, Not Recognized"
+                                Toast.makeText(getApplicationContext(),
+                                        "Login Failed, Not Recognized"
                                         ,Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(LoginScreen.this,LoginScreen.class));
+                                startActivity(new Intent(LoginScreen.this,LoginScreen
+                                        .class));
                             }
 
                         }
@@ -86,27 +91,24 @@ public class LoginScreen extends AppCompatActivity {
             }
         });//end of LOGIN CLICKLISTENER
 
-        login.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
+        login.setOnTouchListener((v, event) -> {
 
-                switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN: {
-                        ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
-                        view.invalidate();
-                        break;
-                    }
-                    case MotionEvent.ACTION_UP:
-                    case MotionEvent.ACTION_CANCEL: {
-                        ImageView view = (ImageView) v;
-                        view.getDrawable().clearColorFilter();
-                        view.invalidate();
-                        break;
-                    }
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN: {
+                    ImageView view = (ImageView) v;
+                    view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                    view.invalidate();
+                    break;
                 }
-                return false;
+                case MotionEvent.ACTION_UP:
+                case MotionEvent.ACTION_CANCEL: {
+                    ImageView view = (ImageView) v;
+                    view.getDrawable().clearColorFilter();
+                    view.invalidate();
+                    break;
+                }
             }
+            return false;
         });
 
         forgotpassword.setOnClickListener(new View.OnClickListener() {
@@ -124,7 +126,8 @@ public class LoginScreen extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff
+                                .Mode.SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -155,7 +158,8 @@ public class LoginScreen extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }

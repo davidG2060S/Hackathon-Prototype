@@ -72,13 +72,10 @@ public class MainMenu1 extends AppCompatActivity {
     String reportN,reportE;
     double LAT,LONG;
     int temp1,temp2,month;
-    //Date date = new Date();
     Calendar date = Calendar.getInstance();
     String reportImgUrl,UID;
 
     Geocoder geocoder;
-
-    List<Address>GPSadd;
 
     LocationManager locationManager;
     //FIREBASE
@@ -246,7 +243,8 @@ public class MainMenu1 extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -271,7 +269,8 @@ public class MainMenu1 extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -303,7 +302,8 @@ public class MainMenu1 extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }
@@ -335,7 +335,8 @@ public class MainMenu1 extends AppCompatActivity {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN: {
                         ImageView view = (ImageView) v;
-                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode.SRC_ATOP);
+                        view.getDrawable().setColorFilter(0x77000000, PorterDuff.Mode
+                                .SRC_ATOP);
                         view.invalidate();
                         break;
                     }
