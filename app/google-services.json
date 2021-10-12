@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "211692772351",
+    "firebase_url": "https://repsys-14ce6-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "repsys-14ce6",
+    "storage_bucket": "repsys-14ce6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211692772351:android:c5fd9abff072b3e65965ca",
+        "android_client_info": {
+          "package_name": "com.example.a757repsys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211692772351-8dg49ug9al32eb5gb6ja0btlmr1bfdnl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkq-MCy7b9p4qSjrFV2chYM-0K5dX6Kc0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211692772351-8dg49ug9al32eb5gb6ja0btlmr1bfdnl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
