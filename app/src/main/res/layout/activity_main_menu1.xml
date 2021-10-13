@@ -47,7 +47,7 @@
             android:layout_width="380dp"
             android:layout_height="55dp"
             android:ems="10"
-            android:hint="Type Here"
+            android:hint=""
             android:inputType="textPersonName"
             android:textColor="@color/black"
             android:textColorHint="#808080"
