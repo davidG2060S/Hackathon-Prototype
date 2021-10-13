@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> Bararngay 757 Report System</title>
+	<link rel="stylesheet" href="css/replypage.css">
+	<style type="text/css">
+
+
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<header>
+	<nav>
+		<img src="images/Icons/eReklamo_logo.png" alt="navigation logo" width="3%" height="3%">
+		<img src="images/Icons/barangay_icon.png" alt="Site Logo" width="5%" height="5%">
+		<ul>
+			<li><a href="HomePage.html">Home</a></li>
+			<li><a href="AdminAccount.html">Manage Admin Account</a></li>
+			<li><a href="UserInformation.html">Manage Users</a></li>
+			<li><a href="RepGen.html">Report Generation</a></li>
+			<li><a href="LoginPage.html">Logout</a></li>
+		</ul>
+	</nav>
+</header>
+
+<body class="parent">
+
+	<div id="main-parent">
+		<div class="headerTable-adjustment">
+			<h1>Report Details</h1>
+		</div>
+
+		<div id="reportID-container" class="divbox">
+			<h4 id="display-reportID"></h4>
+			<p id="diplay-reportCategory"></p>
+			<p id="diplay-loction"></p>
+
+
+			<select name="Status" id="report-tbl-status">
+				<option value="Pending">Pending</option>
+				<option value="Resolved">Resolved</option>
+				<option value="URGENT">URGENT</option>
+			</select>
+			<button class="greenbutton" id="btn-update-status">Update</button>
+
+			</table>
+
+			<img id="reportImage" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+				alt="Report Image">
+
+		</div>
+		<br>
+
+		<div id="reporterInfo" class="divbox">
+			<h4 id="repInfoTitle">Reporter Information</h4>
+			<p id="display-reporterUser"></p>
+			<p id="reporter-name"></p>
+			<p id="reporter-contact"></p>
+
+			<a id="user-link" href="#">User Info</a>
+		</div>
+
+
+		<div id="userreply-container" class="divbox">
+			<label for="userReply">User Reply:</label><br>
+			<textarea style="width: 100%; min-width: 100%; max-width: 100%; height: 50px;" id="userReply"
+				readonly></textarea>
+		</div>
+
+		<div id="reply-container" class="divbox">
+			<label for="adminReply">Admin Reply:</label><br>
+			<textarea style="width: 100%; min-width: 100%; max-width: 100%; height: 50px;" id="adminReply"></textarea>
+			<button class="greenbutton" id="btn-reply">Reply</button>
+		</div>
+	</div>
+
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+	<!-- Firestore Service -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+	<!-- JQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/initializeFirebase.js"></script>
+
+	<script src="js/replyPage.js"></script>
+</body>
+
+</html>

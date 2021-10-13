@@ -1,0 +1,95 @@
+.header {
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  width: 100%;
+  background: #1D48E0;
+  color: white;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+form {
+  border: 3px solid #f1f1f1;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  column-count: 1;
+  display: inline-block;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 250px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.login_form {
+  padding: 16px;
+  position: absolute;
+  right: 200px;
+  width: 500px;
+  height: 300px;
+  border: 3px solid rgb(80, 80, 80);
+}
+
+.login_img {
+  width: 500px;
+  height: 500px;
+}
+
+.navbar li {
+  display: inline;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar a:hover {
+  color: red;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.whole_div {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  border: 3px solid #73ad21;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+}

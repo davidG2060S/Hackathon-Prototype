@@ -1,0 +1,307 @@
+@charset "UTF-8";
+/* CSS Document */
+body { background-color: lightgray}
+
+nav { 
+	background: linear-gradient(to right, #9892DC,#1D48E0);
+	margin: -10px -10px 3% -10px;
+	padding: 1% !important;
+	min-width: 100%;
+	min-height: 5%;
+	
+}
+h1 {
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+}
+p { 
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+}
+/* HOME PAGE: Barangay 757 aligned left on Home Page */ 
+.logo_home {
+	float: left;
+	text-align: center;
+	padding-left: 10%;
+	max-height: 200px;
+	max-height: 100px;
+	z-index: inherit;
+} 
+
+/* HOME PAGE: Login Data */ 
+.logindetails { 
+	background: white;
+	padding: 50px 60px 50px 75px;
+	margin-left: 5%;
+	margin-right: 5%;
+	min-width: 100px;
+	min-height: 50px;
+	border-radius: 25px;
+		float: right; 
+	align-content: center;
+	box-shadow: -10px 15px 10px 2px #888888;
+}
+.LoginButton {
+			font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	color: #FFFFFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: linear-gradient(to right, #9892DC,#1D48E0);
+	padding: 10px 20px 10px 20px;
+	outline: none !important;
+	border: none !important;
+	min-width: 200px;
+	align-content: center;
+	
+}
+
+.SignUp {
+	background:  linear-gradient(to right, #9892DC,#1D48E0);
+	padding: 10px 10px 10px 10px;
+	outline: none !important;
+	border: none !important;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	color: #FFFFFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	min-width: 150px;
+		margin: 10px;
+	align-content: center;
+}
+
+#lname {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	min-width: 180px;
+	border-bottom: 1px solid #858585;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	align-content: center;
+}
+
+#fname {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	min-width: 180px;
+	border-bottom: 1px solid #858585;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	align-content: center;
+}
+
+/*SIGN UP PAGE: */ 
+.NewAccount { 
+	background: white;
+	padding: 50px 60px 50px 75px;
+	margin-left: 20%;
+	margin-right: 20%;
+	min-width: 300px;
+	min-height: 50px;
+	border-radius: 25px;
+		float: center; 
+	align-content: center;
+	box-shadow: -10px 15px 10px 2px #888888;
+}
+
+#Username {
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	min-width: 40%;
+	border-bottom: 1px solid #858585;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin-left: 25%;
+}
+
+#Pw {
+font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+min-width: 40%;
+	border-bottom: 1px solid #858585;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin-left: 25%;
+	
+}
+#Cpw {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	min-width: 40%;
+	border-bottom: 1px solid #858585;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	margin-left: 25%;
+	
+}
+#Cancel {
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	color: #FFFFFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: grey;
+	margin-left: 25%;
+
+	padding: 10px 20px 10px 20px;
+	outline: none !important;
+	border: none !important;
+	min-width: 20%;
+	align-content: center ;
+	
+}
+#CreateNew {
+		font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	color: #FFFFFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: linear-gradient(to right, #9892DC,#1D48E0);
+	padding: 10px 20px 10px 20px;
+	outline: none !important;
+	border: none !important;
+	min-width: 20%;
+	align-content: center;		
+}
+/*NAV BAR IN HOME PAGE & INNER PAGES */ 
+
+ul {
+  list-style-type: none;
+  margin: 0 0 0 8%;
+  padding: 0 0 0.5% 0;
+	position: relative;
+	top: -50px;
+}
+
+li {
+  float: left; 
+}
+
+li a {
+		font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	color: #FFFFFF;
+	font-weight: 700;
+	text-transform: uppercase;
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 20px;
+	  border: 2px solid #FFFFFF;
+	border-radius: 20px;
+	margin-left: 30px;
+
+  text-decoration: none;
+	
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #03BC7E;
+color: aquamarine;
+}
+
+/*Table on HOME PAGE */ 
+
+.TableStyle {
+	background-color: white;
+	text-align: center;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	color: black;
+	font-weight: 400;
+	margin: auto; 
+	float: center;
+	border-radius: 25px;
+}
+.TableStyle table, th, td {
+border-bottom: 0.5px solid #939393; 
+border-spacing: 0;
+padding: 1% 1% 1.5% 1%;
+}
+.TableStyle tr:nth-child(even) {
+	background-color: lightgrey;
+}
+
+.TableStyle td:nth-child(8) {
+	color: blue;
+}
+.TableStyle td:nth-of-type(7) {
+	color: red;
+}
+.headerTable-adjustment {
+	margin-left: 10%;
+}
+
+/*Reply Page */ 
+
+#reportID {
+		background-color: white !important;
+	text-align: left;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	color: black;
+	font-weight: 400;
+	margin: auto 20% 1% 10%;
+	min-width: 400px;
+	padding: 20px 5px 20px 20px;
+	float: left;
+	border-radius: 25px;
+	z-index: auto;
+	align-items: center!important;
+	all: center;
+}
+	#reportID tr:nth-child(even) {
+	background-color: white !important;
+}
+#reporterInfo {
+		background-color: white !important;
+	text-align: center !important;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, 'sans-serif';
+	color: black;
+	font-weight: 400;
+margin: auto 20% 1% 5%;
+	min-width: 400px;
+	padding: 20px 5px 20px 20px !important;
+	float: right;
+	align-content: right;
+	border-radius: 25px;
+	top: 0px !important;
+}
+	#reporterInfo tr:nth-child(even) {
+	background-color: white !important;
+	
+}
+
+/* Password Change */ 
+
+#PasswordChange {
+	margin: 1% 10%;
+	padding: 1% 30% 1% 30%; 
+	background: white;
+	border-radius: 25px;
+	float: center;
+	align-content: center;
+	text-align: center;
+
+}
+#OldPW { 
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	min-width: 180px;
+	border-bottom: 1px solid #858585;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	align-content: center;
+}
+#NewPW {
+		font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	min-width: 180px;
+	border-bottom: 1px solid #858585;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	align-content: center;
+	
+}
+#ConfirmNPW {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	min-width: 180px;
+	border-bottom: 1px solid #858585;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	align-content: center; 
+}

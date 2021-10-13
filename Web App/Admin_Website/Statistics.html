@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <title> Bararngay 757 Report System</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+
+  <link rel="stylesheet" href="css/repGen.css">
+
+
+  <style type="text/css">
+    /* custom styles here */
+  </style>
+</head>
+
+<header>
+  <nav>
+    <img src="images/Icons/eReklamo_logo.png" alt="navigation logo" width="3%" height="3%">
+    <img src="images/Icons/barangay_icon.png" alt="Site Logo" width="5%" height="5%">
+    <ul>
+      <li><a href="HomePage.html">Home</a></li>
+      <li><a href="AdminAccount.html">Manage Admin Account</a></li>
+      <li><a href="UserInformation.html">Manage Users</a></li>
+      <li><a href="RepGen.html">Report Generation</a></li>
+      <li><a href="LoginPage.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <!-- Start your project here-->
+  <div class="headerTable-adjustment">
+    <h1>Report Generation</h1>
+  </div>
+
+  <div class="repGenNav">
+    <ul>
+      <li><a href="RepGen.html">Top Reports</a></li>
+      <li><a href="ReportsInAMonth.html">Reports in a Month</a></li>
+      <li><a href="Statistics.html">Statistics</a></li>
+    </ul>
+  </div>
+
+
+
+  <!-- <div class="grid-container">
+
+  <div style="width: 80%;margin: auto auto">
+    <div style="margin: auto auto;" id="child purple"></div>
+    <div style="margin: auto auto;" id="child green"></div>
+    
+</div> -->
+
+  <div class="grid-container">
+
+    <div class="grid-child purple">
+
+      <div>
+        <p id="numberOfUsers"></p>
+      </div>
+      <div>
+        <p id="totalUnresolvedReports"></p>
+      </div>
+      <div>
+        <p id="totalUnresolvedEmergencyReports"></p>
+      </div>
+
+    </div>
+
+    <div class="grid-child green">
+
+      <div>
+        <p id="totalReportsMade"></p>
+      </div>
+      <div>
+        <p id="totalResolvedReports"></p>
+      </div>
+      <div>
+        <p id="totalResolvedEmergencyReports"></p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <br>
+
+  <table style="width:80%" class="TableStyle" id="statEmerTable">
+    <tr>
+      <th>Emergency Report Categories</th>
+      <th>Pending</th>
+      <th>URGENT</th>
+      <th>Resolved</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td>Accident Involving Animals</td>
+      <td id="ER-AIA-pending"></td>
+      <td id="ER-AIA-URGENT"></td>
+      <td id="ER-AIA-resolved"></td>
+      <td id="ER-AIA-total"></td>
+    </tr>
+    <tr>
+      <td>Actions Against Police</td>
+      <td id="ER-AAP-pending"></td>
+      <td id="ER-AAP-URGENT"></td>
+      <td id="ER-AAP-resolved"></td>
+      <td id="ER-AAP-total"></td>
+    </tr>
+    <tr>
+      <td>Assault/Violence</td>
+      <td id="ER-AV-pending"></td>
+      <td id="ER-AV-URGENT"></td>
+      <td id="ER-AV-resolved"></td>
+      <td id="ER-AV-total"></td>
+    </tr>
+    <tr>
+      <td>Breaking and Entering</td>
+      <td id="ER-BaE-pending"></td>
+      <td id="ER-BaE-URGENT"></td>
+      <td id="ER-BaE-resolved"></td>
+      <td id="ER-BaE-total"></td>
+    </tr>
+    <tr>
+      <td>Fatal Accident</td>
+      <td id="ER-FA-pending"></td>
+      <td id="ER-FA-URGENT"></td>
+      <td id="ER-FA-resolved"></td>
+      <td id="ER-FA-total"></td>
+    </tr>
+    <tr>
+      <td>Fire</td>
+      <td id="ER-fire-pending"></td>
+      <td id="ER-fire-URGENT"></td>
+      <td id="ER-fire-resolved"></td>
+      <td id="ER-fire-total"></td>
+    </tr>
+    <tr>
+      <td>Medical</td>
+      <td id="ER-med-pending"></td>
+      <td id="ER-med-URGENT"></td>
+      <td id="ER-med-resolved"></td>
+      <td id="ER-med-total"></td>
+    </tr>
+    <tr>
+      <td>Road Traffic Accident</td>
+      <td id="ER-RTA-pending"></td>
+      <td id="ER-RTA-URGENT"></td>
+      <td id="ER-RTA-resolved"></td>
+      <td id="ER-RTA-total"></td>
+    </tr>
+    <tr>
+      <td>Sports Related Injuries</td>
+      <td id="ER-SRI-pending"></td>
+      <td id="ER-SRI-URGENT"></td>
+      <td id="ER-SRI-resolved"></td>
+      <td id="ER-SRI-total"></td>
+    </tr>
+    <tr>
+      <td>Stranded (Flood)</td>
+      <td id="ER-SF-pending"></td>
+      <td id="ER-SF-URGENT"></td>
+      <td id="ER-SF-resolved"></td>
+      <td id="ER-SF-total"></td>
+    </tr>
+    <tr>
+      <td>Trespassing</td>
+      <td id="ER-Tress-pending"></td>
+      <td id="ER-Tress-URGENT"></td>
+      <td id="ER-Tress-resolved"></td>
+      <td id="ER-Tress-total"></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table style="width:80%" class="TableStyle" id="statNormTable">
+    <tr>
+      <th>Normal Report Categories</th>
+      <th>Pending</th>
+      <th>Resolved</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <td>Construction Issues</td>
+      <td id="NR-CI-pending"></td>
+      <td id="NR-CI-resolved"></td>
+      <td id="NR-CI-total"></td>
+    </tr>
+    <tr>
+      <td>Covid Lockdown Violation</td>
+      <td id="NR-CLV-pending"></td>
+      <td id="NR-CLV-resolved"></td>
+      <td id="NR-CLV-total"></td>
+    </tr>
+    <tr>
+      <td>Destruction of Property</td>
+      <td id="NR-DoP-pending"></td>
+      <td id="NR-DoP-resolved"></td>
+      <td id="NR-DoP-total"></td>
+    </tr>
+    <tr>
+      <td>Disturbance</td>
+      <td id="NR-Dist-pending"></td>
+      <td id="NR-Dist-resolved"></td>
+      <td id="NR-Dist-total"></td>
+    </tr>
+    <tr>
+      <td>Engineering</td>
+      <td id="NR-Engi-pending"></td>
+      <td id="NR-Engi-resolved"></td>
+      <td id="NR-Engi-total"></td>
+    </tr>
+    <tr>
+      <td>Informal Settlers</td>
+      <td id="NR-IS-pending"></td>
+      <td id="NR-IS-resolved"></td>
+      <td id="NR-IS-total"></td>
+    </tr>
+    <tr>
+      <td>Stray Animals</td>
+      <td id="NR-SA-pending"></td>
+      <td id="NR-SA-resolved"></td>
+      <td id="NR-SA-total"></td>
+    </tr>
+    <tr>
+      <td>Theft</td>
+      <td id="NR-Theft-pending"></td>
+      <td id="NR-Theft-resolved"></td>
+      <td id="NR-Theft-total"></td>
+    </tr>
+    <tr>
+      <td>Waste Management</td>
+      <td id="NR-WM-pending"></td>
+      <td id="NR-WM-resolved"></td>
+      <td id="NR-WM-total"></td>
+    </tr>
+  </table>
+
+  <br><br>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+  <!-- Firestore Service -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+  <!-- Datatable -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+  <!-- Firebase -->
+  <script src="js/initializeFirebase.js"></script>
+
+
+  <script src="js/statsPage.js"></script>
+
+</body>
+
+</html>

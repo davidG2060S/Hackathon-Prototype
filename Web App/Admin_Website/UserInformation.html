@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> Bararngay 757 Report System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+	<link rel="stylesheet" href="css/userInfo.css">
+
+
+</head>
+
+<header>
+	<nav id="navbar-nav">
+		<img src="images/Icons/eReklamo_logo.png" alt="navigation logo" width="3%" height="3%">
+		<img src="images/Icons/barangay_icon.png" alt="Site Logo" width="5%" height="5%">
+		<ul id="navbar-ul">
+			<li id="navbar-li"><a href="HomePage.html">Home</a></li>
+			<li id="navbar-li"><a href="AdminAccount.html">Manage Admin Account</a></li>
+			<li id="navbar-li"><a href="UserInformation.html">Manage Users</a></li>
+			<li id="navbar-li"><a href="RepGen.html">Report Generation</a></li>
+			<li id="navbar-li"><a href="LoginPage.html">Logout</a></li>
+		</ul>
+	</nav>
+</header>
+
+<body>
+
+	<div class="headerTable-adjustment">
+		<h1> User Information</h1>
+	</div>
+
+	<div class="container">
+
+		<div style="width: 80%;margin: auto auto">
+			<table style="margin: auto auto;" id="userTable"></table>
+		</div>
+
+	</div>
+
+
+	<br>
+
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+	<!-- Firestore Service -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+	<!-- Datatable -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="js/initializeFirebase.js"></script>
+	<script src="js/usersInfo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <title> Bararngay 757 Report System</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+  <link rel="stylesheet" href="css/repGen.css">
+
+  <style type="text/css">
+    /* custom styles here */
+  </style>
+</head>
+
+<header>
+  <nav>
+    <img src="images/Icons/eReklamo_logo.png" alt="navigation logo" width="3%" height="3%">
+    <img src="images/Icons/barangay_icon.png" alt="Site Logo" width="5%" height="5%">
+    <ul>
+      <li><a href="HomePage.html">Home</a></li>
+      <li><a href="AdminAccount.html">Manage Admin Account</a></li>
+      <li><a href="UserInformation.html">Manage Users</a></li>
+      <li><a href="RepGen.html">Report Generation</a></li>
+      <li><a href="LoginPage.html">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <!-- Start your project here-->
+  <div class="headerTable-adjustment">
+    <h1>Report Generation</h1>
+  </div>
+
+  <div class="repGenNav">
+    <ul>
+      <li><a href="RepGen.html">Top Reports</a></li>
+      <li><a href="ReportsInAMonth.html">Reports in a Month</a></li>
+      <li><a href="Statistics.html">Statistics</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <canvas id="reportsInAMonth"></canvas>
+  </div>
+
+  <br><br>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+  <!-- Firestore Service -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/initializeFirebase.js"></script>
+
+
+  <script src="js/repmonth.js"></script>
+
+</body>
+
+</html>
