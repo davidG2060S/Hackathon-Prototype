@@ -72,7 +72,6 @@ public class MainMenu1 extends AppCompatActivity {
     String reportN,reportE;
     double LAT,LONG;
     int temp1,temp2,month;
-    //Date date = new Date();
     Calendar date = Calendar.getInstance();
     String reportImgUrl,UID;
 
